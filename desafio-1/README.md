@@ -9,5 +9,6 @@ A aplicação é exposta usando a porta 3000
 
 ### Comandos 
 
-make build 
-make up
+construção da imagem: make build
+
+execução do container: make up
