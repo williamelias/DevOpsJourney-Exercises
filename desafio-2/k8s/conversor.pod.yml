@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: conversor
+  labels:
+    name: conversor
+spec:
+  containers:
+    - name: conversor
+      image: williameliasalves/conversao-temperatura:desafio2
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 8080
