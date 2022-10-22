@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+spec:
+  selector:
+    matchLabels:
+      app: news
+  template:
+    metadata:
+      labels:
+        app: news
+    spec:
+      containers:
+        - name: conversor
+          image: williameliasalves/kube-news:desafio2
+          resources:
+            limits:
+              memory: "80Mi"
+              cpu: "150m"
+          ports:
+            - containerPort: 3001
+  replicas: 2
