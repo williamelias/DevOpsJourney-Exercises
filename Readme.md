@@ -10,3 +10,11 @@ repositório usado para criar a imagem: https://github.com/KubeDev/conversao-tem
 **Desafio 2 - Kubernets e orquestração de containers**
 
 repositório usado para criar a imagem: https://github.com/KubeDev/conversao-temperatura
+
+**Desafio 3 - Terraform e Infraestrutura como código**
+
+Criação de uma configuração terraform no Provedor Digital Ocean com os seguintes recursos:
+    - droplet
+    - kubernets cluster
+    - ssh_key
+    - token de acesso
