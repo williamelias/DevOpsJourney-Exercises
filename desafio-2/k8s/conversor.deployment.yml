@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conversor
+spec:
+  selector:
+    matchLabels:
+      app: conversor
+  template:
+    metadata:
+      labels:
+        app: conversor
+    spec:
+      containers:
+        - name: conversor
+          image: williameliasalves/conversao-temperatura:desafio2
+          resources:
+            limits:
+              memory: "80Mi"
+              cpu: "150m"
+          ports:
+            - containerPort: 8080
+  replicas: 2

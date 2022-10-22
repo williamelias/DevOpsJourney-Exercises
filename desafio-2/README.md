@@ -14,3 +14,7 @@ construção da imagem: make build
 
 push para docker hub: make push
 
+criação do deployment e service: make apply
+
+apontamento para o localhost: make forward
+

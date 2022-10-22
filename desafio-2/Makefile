@@ -4,13 +4,14 @@ build:
 	@docker build -t williameliasalves/conversao-temperatura:desafio2 conversao-temperatura/src
 run:
 
-#push
+#target push: push image to dockerhub
 push:
 	@docker push  williameliasalves/conversao-temperatura:desafio2
 	@docker push  williameliasalves/conversao-temperatura:latest
-
+#target apply: apply deployment kubernets
 apply:
-	kubect apply -f conversor.pod.yml
-
+	@kubectl apply -f ./k8s/conversor.deployment.yml
+	@kubectl apply -f ./k8s/conversor.service.yml
+#target forward: execute a por-forward kubectl that point service port to localhost:8080
 forward:
-	kubect port-forward pod/conversor 8080:8080
+	@kubectl port-forward service/conversor-svc 8000:8000
