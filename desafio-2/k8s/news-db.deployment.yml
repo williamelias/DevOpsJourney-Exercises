@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news-db
+spec:
+  selector:
+    matchLabels:
+      app: news-db
+  template:
+    metadata:
+      labels:
+        app: news-db
+    spec:
+      containers:
+        - name: news-db
+          image: postgres
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              value: kubedevnews
+            - name: POSTGRES_USER
+              value: kubedevnews
+            - name: POSTGRES_PASSWORD
+              value: SimplePass#

@@ -4,9 +4,6 @@
 
 Seguindo a aula, clonei o repositório conversão temperatura (https://github.com/KubeDev/conversao-temperatura) e criei uma imagem Docker da aplicação seguindo as melhores práticas.
 
-### Observações do projeto
-
-A aplicação é exposta usando a porta 8080
 
 ### Comandos 
 
@@ -38,10 +35,10 @@ A aplicação é exposta usando a porta 8080
 
         make push_news
 
-- criação do deployment e service:   
+- criação do deployment e service (site e banco de dados):   
 
         make apply_news
 
-- apontamento para o localhost: 
+- apontamento para o localhost (rodando na porta 3001): 
         
         make forward_news
