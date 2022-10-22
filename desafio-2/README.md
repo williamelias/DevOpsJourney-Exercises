@@ -10,11 +10,19 @@ A aplicação é exposta usando a porta 8080
 
 ### Comandos 
 
-construção da imagem: make build
+construção da imagem: 
 
-push para docker hub: make push
+    make build
 
-criação do deployment e service: make apply
+push para docker hub: 
 
-apontamento para o localhost: make forward
+    make push
+
+criação do deployment e service:   
+
+    make apply
+
+apontamento para o localhost: 
+    
+    make forward
 
